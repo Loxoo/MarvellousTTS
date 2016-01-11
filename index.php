@@ -1,3 +1,5 @@
 <?php
 
-echo Youhou;
+echo "Youhou";
+?>
+
