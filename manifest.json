@@ -24,19 +24,5 @@
    "name": "BlindLens",
    "options_page": "options.html",
    "permissions": [ "\u003Call_urls>", "contextMenus", "ttsEngine", "tts", "tabs", "webRequest", "webNavigation", "unlimitedStorage", "webRequestBlocking", "https://*/*" ],
-   "tts_engine": {
-      "voices": [ {
-         "event_types": [ "start", "marker", "end" ],
-         "gender": "female",
-         "lang": "en_US",
-         "voice_name": "iSpeech"
-      }, {
-         "event_types": [ "start", "marker", "end" ],
-         "gender": "female",
-         "lang": "en_US",
-         "voice_name": "BlindLens"
-      } ]
-   },
-  
    "version": "1.0"
 }
