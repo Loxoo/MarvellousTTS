@@ -19,7 +19,6 @@
       "128": "images/icon.png",
       "16": "small_icon.png"
    },
-   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDABrGGT8K54o9aUtrqROVRW4IIw1TYylqwqD8X4FWFdWNFNLvbjhemOZkO4DyaaBOnv4zv/1rg8Ix5k/RLdfuAyye0JJi2mLHckUvC3dUscfwCx9ap+iARLAZvu/RhoRm5okk7PvSHTBmGvyBNvDlObapH2+GBk/rsXkejU0H5twIDAQAB",
    "manifest_version": 2,
    "minimum_chrome_version": "14",
    "name": "BlindLens",
@@ -29,15 +28,15 @@
       "voices": [ {
          "event_types": [ "start", "marker", "end" ],
          "gender": "female",
-         "lang": "en_US",
+         "lang": "fr",
          "voice_name": "iSpeech"
       }, {
          "event_types": [ "start", "marker", "end" ],
          "gender": "female",
-         "lang": "en_US",
+         "lang": "fr",
          "voice_name": "BlindLens"
       } ]
    },
-   "update_url": "https://clients2.google.com/service/update2/crx",
+  
    "version": "1.0"
 }

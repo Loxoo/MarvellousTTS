@@ -1,15 +1,7 @@
 /*
- * SpeakIt Core
- *
- * This file contains SpeakIt core functions 
- *
- * @package		SpeakIt
- * @category	Core
- * @author		Trajche Petrov a.k.a SkechBoy
- * @link		https://github.com/skechboy/SpeakIt
-*/
 
-/*
+ * This file contains SpeakIt core functions 
+
  * ---------------------------------------------------------------------------------------------------------------------
  * Defining main background variables
  * ---------------------------------------------------------------------------------------------------------------------
@@ -94,10 +86,6 @@
  * This function is called onload in the popup code
  * ---------------------------------------------------------------------------------------------------------------------
 */
-	function _do_update()
-	{
-		chrome.tabs.create({url: 'https://skechboy.com/speakit/new-update'});
-	}
 
 /*
  * ---------------------------------------------------------------------------------------------------------------------
