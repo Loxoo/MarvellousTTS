@@ -28,12 +28,12 @@
       "voices": [ {
          "event_types": [ "start", "marker", "end" ],
          "gender": "female",
-         "lang": "fr",
+         "lang": "en_US",
          "voice_name": "iSpeech"
       }, {
          "event_types": [ "start", "marker", "end" ],
          "gender": "female",
-         "lang": "fr",
+         "lang": "en_US",
          "voice_name": "BlindLens"
       } ]
    },
