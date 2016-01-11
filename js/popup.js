@@ -1,19 +1,7 @@
 /*
- * SpeakIt GUI
- *
+ 
  * This file contains code that displays Grafical User Interface
  *
- * @package		SpeakIt
- * @category	GUI
- * @author		Trajche Petrov a.k.a SkechBoy
- * @link		https://github.com/skechboy/SpeakIt
-*/
-
-/*
- * -----------------------------------------------------------------------------
- * Defining main variables 
- * -----------------------------------------------------------------------------
-*/
 	var prevstate = 0,
 		status = 'play',
 		bg = chrome.extension.getBackgroundPage(), // get background page
@@ -26,10 +14,7 @@
 		play = document.getElementById("play"),
 		options = JSON.parse(localStorage.getItem("options"));
 
-/*
- * -----------------------------------------------------------------------------
- * Event listeners
- * -----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 */
 	canvas.addEventListener('click', function() // Volume adjustment
 	{

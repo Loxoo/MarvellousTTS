@@ -5,7 +5,7 @@
    "browser_action": {
       "default_icon": "small_icon.png",
       "default_popup": "popup.html",
-      "default_title": "__MSG_title__"
+      "default_title": "Application pour les malvoyants, non voyants utilisant plusieurs API"
    },
    "content_scripts": [ {
       "all_frames": true,
@@ -14,7 +14,7 @@
       "run_at": "document_end"
    } ],
 
-   "description": "__MSG_desc__",
+   "description": "Application pour les malvoyants, non voyants utilisant plusieurs API",
    "icons": {
       "128": "images/icon.png",
       "16": "small_icon.png"
@@ -29,12 +29,12 @@
       "voices": [ {
          "event_types": [ "start", "marker", "end" ],
          "gender": "female",
-         "lang": "en-US",
+         "lang": "en_US",
          "voice_name": "iSpeech"
       }, {
          "event_types": [ "start", "marker", "end" ],
          "gender": "female",
-         "lang": "fr-FR",
+         "lang": "en_US",
          "voice_name": "BlindLens"
       } ]
    },

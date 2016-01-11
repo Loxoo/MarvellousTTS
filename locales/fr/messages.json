@@ -3,10 +3,10 @@
       "message": "Redemarrer le navigateur Chrome pour que les changements prennent effets."
    },
    "desc": {
-      "message": "Fatigue de lire? SpeakIt Converti le texte en parole ainsi vous n'avez plus а le lire."
+      "message": "Fatigue de lire? BlindLens Converti le texte en parole ainsi vous n'avez plus а le lire."
    },
    "lang_contex": {
-      "message": "Activer les raccourcis du menu contextuelle de SpeakIt."
+      "message": "Activer les raccourcis du menu contextuelle de BlindLens."
    },
    "lang_donate": {
       "message": "Faire Une Donation"
@@ -27,7 +27,7 @@
       "message": "Raccourci clavier"
    },
    "lang_options": {
-      "message": "SpeakIt! - Options"
+      "message": "BlindLens! - Options"
    },
    "lang_paypal": {
       "message": "Donation PayPal"
@@ -57,7 +57,7 @@
       "message": "Test"
    },
    "lang_testtext": {
-      "message": "Ceci est un test pour l'extension de Goole Chrome denommee SpeakIt"
+      "message": "Ceci est un test pour l'extension de Goole Chrome denommee BlindLens"
    },
    "lang_voices": {
       "message": "Vous desirez d'autre voix?"
@@ -69,7 +69,7 @@
       "message": "Mots/minute"
    },
    "paypalinfo": {
-      "message": "SpeakIt! est completement gratuit, si vous l'apprecie, s'il vous plait, faites une legere donation afin de soutenir ce logiciel et de permettre le financement futur du developement de celui-ci. Toutes les donations sont appreciees \u003Cbr/>\u003Cb>Merci !\u003C/b>\u003Cdiv id='paypal'>\u003C/div>"
+      "message": "BlindLens! est completement gratuit"
    },
    "tip": {
       "message": "Vos preferences ont ete sauvegardees avec succes."

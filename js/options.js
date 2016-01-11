@@ -1,12 +1,7 @@
 /*
- * SpeakIt Options
- *
- * This file contains user options funcrions
- *
- * @package		SpeakIt
- * @category	Options
- * @author		Trajche Petrov a.k.a SkechBoy
- * @link		https://github.com/skechboy/SpeakIt
+ 
+ * This file contains user options functions
+
  */
 	var element = {},
 		bg = chrome.extension.getBackgroundPage(),
@@ -401,7 +396,7 @@ function getVoices()
 function get_ivoices()
 {
 	var request = new XMLHttpRequest();
-	request.open("GET", "http://www.ispeech.org/key?key=59e482ac28dd52db23a22aff4ac1d31e&voices&output=json&labels", true);
+	//request.open("GET", "http://www.ispeech.org/key?key=59e482ac28dd52db23a22aff4ac1d31e&voices&output=json&labels", true);
 	request.onreadystatechange = function() 
 	{
 		if (request.readyState == 4)

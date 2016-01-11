@@ -1,13 +1,7 @@
 /*
- * SpeakIt GUI
- *
+
  * This file contains code that displays Grafical User Interface
- *
- * @package		SpeakIt
- * @category	GUI
- * @author		Trajche Petrov a.k.a SkechBoy
- * @link		https://github.com/skechboy/SpeakIt
- 
+
  * -----------------------------------------------------------------------------
  *  Get selected text don't work on iframes and some ssl encrypted pages
  *  depends' on level of encryption of page certificate...
