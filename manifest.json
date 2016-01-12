@@ -6,13 +6,6 @@
       "default_icon": "small_icon.png",
       "default_title": "Application pour les malvoyants, non voyants utilisant plusieurs API"
    },
-   "content_scripts": [ {
-      "all_frames": true,
-      "js": [ "js/addSpeech.js" ],
-      "matches": [ "\u003Call_urls>", "https://*/*" ],
-      "run_at": "document_end"
-   } ],
-
    "description": "Application pour les malvoyants, non voyants utilisant plusieurs API",
    "icons": {
       "128": "images/icon.png",
