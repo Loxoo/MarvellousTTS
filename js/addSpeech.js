@@ -1,16 +1,7 @@
 /*
- * SpeakIt Speech Input
- *
+ 
  * This file contains SpeakIt speech input and shortcut's functions
- *
- * @package		SpeakIt
- * @category	Speech Input
- * @author		Trajche Petrov a.k.a SkechBoy
- * @link		https://github.com/skechboy/SpeakIt
- */
-
-/*
- * -----------------------------------------------------------------------------
+ ----------------------------------------------------------------------------
  * Defining main background variables and get user defined options
  * -----------------------------------------------------------------------------
  */

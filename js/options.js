@@ -93,11 +93,7 @@ function init_listeners()
 		save_options();
 	});
 	
-	element.lang_voices.addEventListener('click', function()
-	{
-		// redirect's to Chrome Webstore for new TTS engines
-		chrome.tabs.create({url: 'http://goo.gl/dU9tB'});
-	});
+
 
 	element.hotkeys.addEventListener("keydown", function(e){keyDown(e,0);save_options();}, false); // keyboard shortcuts
 	
