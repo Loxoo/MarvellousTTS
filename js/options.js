@@ -66,10 +66,7 @@ function init_listeners()
 		save_options();
 	});
 
-	element.app_logo.addEventListener('click', function()
-	{
-		chrome.tabs.create({url: 'http://www.ispeech.org/webapps/speakit'});	
-	});
+	
 
 	element.pitch.addEventListener('change', function()
 	{
