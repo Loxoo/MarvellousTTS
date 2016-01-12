@@ -253,11 +253,11 @@ function voice_options(voice)
 		case 'iSpeech':
 			get_ivoices();
 			document.getElementById("ispeech").style.display = 'block';
-			element.testtext.value = "This is a test text for Google Chrome extension called SpeakIt";				
+			element.testtext.value = "Ceci est un texte généré pour tester la traduction";				
 		break;
 		default:
 			document.getElementById("moreoptions").style.display = 'block';
-			element.testtext.value = "This is a test text for Google Chrome extension called SpeakIt";
+			element.testtext.value = "Ceci est un texte généré pour tester la traduction";
 	}
 }
 
