@@ -55,7 +55,7 @@
 				pitch: 1.0,
 				enqueue: false,
 				context: true,			
-				logo : true,
+			
 				speechinput : false,
 				collect: true,
 				hotkeys:"ctrl + shift + 83" // Ctrl+Shift+S default kb shortcut

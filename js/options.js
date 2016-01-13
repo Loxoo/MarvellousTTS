@@ -8,7 +8,7 @@
 		vars = [
 					'rate','test', 'rateps', 'irateps', 'pitch', 'voice', 'ivoice', 'volume', 'context', 'speechinput',
 					'words', 'iwords', 'lang_voices', 'hotkeys', 'enqueue', 'percents', 'testtext', 'language', 'hotkey',
-					'lang_voices', 'irate','options_title', 'logo', 'app_logo', 'lang_paypalinfo', 'paypal_coffee', 
+					'lang_voices', 'irate','options_title', 'app_logo', 'lang_paypalinfo', 'paypal_coffee', 
 					'paypal_new_version', 'paypal_supporter'
 				];
 /*
@@ -83,10 +83,7 @@ function init_listeners()
 		save_options();
 	});
 
-	element.logo.addEventListener('change', function()
-	{
-		save_options();
-	});
+
 
 	element.ivoice.addEventListener('change', function()
 	{
@@ -189,7 +186,7 @@ function save_options()
 		pitch :  element.pitch.value,
 		enqueue :  element.enqueue.checked,
 		speechinput : element.speechinput.checked,
-		logo : element.logo.checked,
+
 		context: element.context.checked,
 		hotkeys: element.hotkey,
 		volume : parseFloat(element.volume.value/100)
@@ -222,7 +219,6 @@ function restore_options()
 	element.irateps.innerHTML = 'x'+irate.value
 	element.words.innerHTML = (200*rate.value).toFixed(0);
 	element.iwords.innerHTML = 30*(parseInt(irate.value)+11);
-	element.logo.checked = options.logo;
 
 	//dspl_info = (options.logo)? 'none' : 'block';
 	//element['lang_paypalinfo'].style.display = dspl_info;
@@ -389,7 +385,6 @@ function getVoices()
 function get_ivoices()
 {
 	var request = new XMLHttpRequest();
-	//request.open("GET", "http://www.ispeech.org/key?key=59e482ac28dd52db23a22aff4ac1d31e&voices&output=json&labels", true);
 	request.onreadystatechange = function() 
 	{
 		if (request.readyState == 4)
