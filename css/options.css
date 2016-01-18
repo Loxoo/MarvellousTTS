@@ -99,19 +99,16 @@ h1
 	}
 		#content-holder #page-header #app_logo
 		{
-			width:111px;
-			height:37px;
+			width:200px;
+			height:150px;
 			float:right;
 			cursor:pointer;
 			position: relative;
 			margin:-30px 0px 0px 0px;
-			-webkit-filter: grayscale(1);
-			background:url('../images/icon-half.png') no-repeat;
+			
+			background:url('../images/icon-half.jpg') no-repeat;
 		}
-			#content-holder #page-header:hover #app_logo
-			{
-				-webkit-filter: grayscale(0);				
-			}
+			
 	#options
 	{
 		min-width:718px;
