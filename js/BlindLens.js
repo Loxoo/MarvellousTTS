@@ -288,7 +288,34 @@
  * ---------------------------------------------------------------------------------------------------------------------
  * On context menu click function
  * ---------------------------------------------------------------------------------------------------------------------
-
+*/
+	function contextMenu(selection)
+	{
+		options = JSON.parse(localStorage.getItem("options")); //must fix
+		if(state != 'playing') 
+		{
+			if(state == 'ready')
+			{
+				if(options.voice == 'BlindLens')
+				{
+					speakIt(filterText(selection.selectionText.toString()));
+				}
+				else
+				{
+					TTS_Speak(selection.selectionText.toString(),true);
+				}
+				textstack = selection.selectionText.toString();
+			}
+			else
+			{
+				resumeAudio();
+			}
+		}
+		else
+		{
+			pauseAudio();
+		}
+	}
 
 /*
  * ---------------------------------------------------------------------------------------------------------------------
