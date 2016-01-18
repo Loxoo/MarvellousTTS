@@ -16,7 +16,6 @@
 		reloaded = [],
 		datastack = [],
 		textstack = '',
-		
 		google_tts = 'http://http://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&client=blindlens&prev=input&tl=',
 		
 		options = JSON.parse(localStorage.getItem("options"));
@@ -47,8 +46,7 @@
 		  	options =
 			{
 				voice: "Google français",
-				ivoice : "usenglishfemale",
-	            version: getVersion(),
+				version: getVersion(),
 	    		volume: 1.0,
 	    		irate : 0,
 				rate: 1.0,
@@ -290,34 +288,7 @@
  * ---------------------------------------------------------------------------------------------------------------------
  * On context menu click function
  * ---------------------------------------------------------------------------------------------------------------------
-*/
-	function contextMenu(selection)
-	{
-		options = JSON.parse(localStorage.getItem("options")); //must fix
-		if(state != 'playing') 
-		{
-			if(state == 'ready')
-			{
-				if(options.voice == 'BlindLens'  || options.voice == 'iSpeech')
-				{
-					speakIt(filterText(selection.selectionText.toString()));
-				}
-				else
-				{
-					TTS_Speak(selection.selectionText.toString(),true);
-				}
-				textstack = selection.selectionText.toString();
-			}
-			else
-			{
-				resumeAudio();
-			}
-		}
-		else
-		{
-			pauseAudio();
-		}
-	}
+
 
 /*
  * ---------------------------------------------------------------------------------------------------------------------
