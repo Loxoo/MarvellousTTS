@@ -7,21 +7,6 @@
       "default_icon": "small_icon.png",
       "default_title": "Application pour les malvoyants, non voyants utilisant plusieurs API"  ,
 	  "default_popup": "popup.html"
-<<<<<<< HEAD
-=======
-      "page": "BlindLens.html"
-   },
-   "browser_action": {
-      "default_icon": "small_icon.png",
-<<<<<<< HEAD
-      "default_title": "Application pour les malvoyants, non voyants utilisant plusieurs API"  ,
-	  "default_popup": "popup.html"
-=======
-      "default_title": "Application pour les malvoyants, non voyants utilisant plusieurs API"
->>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
->>>>>>> 5c68518f719f66c7e1856f0b31e73d2bb371a202
-=======
->>>>>>> 1ef9d23ab6672dc90a18f7ee3c1493a076b52276
    },
    "description": "Application pour les malvoyants, non voyants utilisant plusieurs API",
    "icons": {
@@ -30,16 +15,6 @@
    },
    "default_locale": "fr",
    "manifest_version": 2, 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-   "manifest_version": 2, 
-=======
-   "manifest_version": 2,
->>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
->>>>>>> 5c68518f719f66c7e1856f0b31e73d2bb371a202
-=======
->>>>>>> 1ef9d23ab6672dc90a18f7ee3c1493a076b52276
    "minimum_chrome_version": "14",
    "name": "BlindLens",
    "options_page": "options.html",
