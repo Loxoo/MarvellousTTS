@@ -1,41 +1,41 @@
 /*
- 
+
  * This file contains user options functions
 
  */
-	var element = {},
-		bg = chrome.extension.getBackgroundPage(),
-		vars = [
-					'rate','test', 'rateps', 'irateps', 'pitch', 'voice', 'ivoice', 'volume', 'context', 'speechinput',
-					'words', 'iwords', 'lang_voices', 'hotkeys', 'enqueue', 'percents', 'testtext', 'language', 'hotkey',
-					'lang_voices', 'irate','options_title', 'app_logo', 'lang_paypalinfo', 'paypal_coffee', 
-					'paypal_new_version', 'paypal_supporter'
-				];
+var element = {},
+	bg = chrome.extension.getBackgroundPage(),
+	vars = [
+		'rate','test', 'rateps', 'irateps', 'pitch', 'voice', 'ivoice', 'volume', 'context', 'speechinput',
+		'words', 'iwords', 'lang_voices', 'hotkeys', 'enqueue', 'percents', 'testtext', 'language', 'hotkey',
+		'lang_voices', 'irate','options_title', 'app_logo', 'lang_paypalinfo', 'paypal_coffee',
+		'paypal_new_version', 'paypal_supporter'
+	];
 /*
  * ---------------------------------------------------------------------------------------------------------------------
  * Create local variables and get their values
  * ---------------------------------------------------------------------------------------------------------------------
-*/
-	function set_vars(vars)
+ */
+function set_vars(vars)
+{
+	for (key in vars)
 	{
-		for (key in vars)
-  		{
-  			key = vars[key];
- 			if(document.getElementById(key) != null)
- 			{
- 				element[key] = document.getElementById(key);
- 			}
- 			else
- 			{
- 				element[key] = '';
- 			}
-  		}
+		key = vars[key];
+		if(document.getElementById(key) != null)
+		{
+			element[key] = document.getElementById(key);
+		}
+		else
+		{
+			element[key] = '';
+		}
 	}
+}
 /*
  * ---------------------------------------------------------------------------------------------------------------------
  * Initialise Event listeners
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 function init_listeners()
 {
 	element.context.addEventListener('click', function() //show that restart is requred
@@ -43,7 +43,7 @@ function init_listeners()
 		toggle("contx_info");
 		save_options();
 	});
-	
+
 	element.test.addEventListener('click', function() //test listener
 	{
 		set_vars(vars);
@@ -53,7 +53,7 @@ function init_listeners()
 			{
 				voiceName: element.voice.value,
 				enqueue: Boolean(element.enqueue.checked),
-		        rate: parseFloat(element.rate.value),
+				rate: parseFloat(element.rate.value),
 				pitch: parseFloat(element.pitch.value),
 				volume: parseFloat(element.volume.value/100)
 			}
@@ -66,7 +66,7 @@ function init_listeners()
 		save_options();
 	});
 
-	
+
 
 	element.pitch.addEventListener('change', function()
 	{
@@ -89,17 +89,17 @@ function init_listeners()
 	{
 		save_options();
 	});
-	
+
 
 
 	element.hotkeys.addEventListener("keydown", function(e){keyDown(e,0);save_options();}, false); // keyboard shortcuts
-	
+
 	element.volume.addEventListener('change', function() // display volume level
 	{
 		element.percents.innerHTML = parseInt(this.value)+' %';
 		save_options();
 	}, false);
-	
+
 	element.rate.addEventListener('change', function() // display rate
 	{
 		element.rateps.innerHTML = 'x'+(parseFloat(this.value)).toFixed(2);
@@ -115,16 +115,16 @@ function init_listeners()
 	}, false);
 
 
-	
+
 }
 /*
  * ---------------------------------------------------------------------------------------------------------------------
  * Check if Local Storage is avalible
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 function checkLocalStorage()
 {
-	if (window.localStorage == null) 
+	if (window.localStorage == null)
 	{
 		alert("LocalStorage must be enabled for changing options.");
 		return false;
@@ -136,23 +136,23 @@ function checkLocalStorage()
  * ---------------------------------------------------------------------------------------------------------------------
  * Get current version
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 function getVersion()
 {
-    var details = chrome.app.getDetails();
-    return details.version;
+	var details = chrome.app.getDetails();
+	return details.version;
 }
 
 /*
  * ---------------------------------------------------------------------------------------------------------------------
  * Get languages supported by chrome *** experimental feature
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 function getLanguages(current)
 {
 	for(langs in languages)
 	{
-		var opt = document.createElement('option');	
+		var opt = document.createElement('option');
 		if (languages[langs].language == current)
 		{
 			opt.setAttribute('selected', 'selected');
@@ -160,23 +160,23 @@ function getLanguages(current)
 		opt.setAttribute('value', languages[langs].language);
 		opt.innerText = languages[langs].name;
 		language.appendChild(opt);
-	}	
+	}
 }
 /*
  * ---------------------------------------------------------------------------------------------------------------------
  * Save user defined options
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 function save_options()
 {
-	
+
 	if(!checkLocalStorage()) return;
 
 	bg.reload();
 
 	localStorage.clear();
 
-  	var options =
+	var options =
 	{
 		version : getVersion(),
 		rate :  element.rate.value,
@@ -200,7 +200,7 @@ function save_options()
  * ---------------------------------------------------------------------------------------------------------------------
  * Get user defined options
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 function restore_options()
 {
 	options = JSON.parse(localStorage.getItem("options"));
@@ -228,7 +228,7 @@ function restore_options()
  * ---------------------------------------------------------------------------------------------------------------------
  * Show specific voice options
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 function voice_options(voice)
 {
 	document.getElementById("moreoptions").style.display = 'none';
@@ -238,12 +238,12 @@ function voice_options(voice)
 	{
 		case 'BlindLens!':
 			element.testtext.value = chrome.i18n.getMessage('lang_testtext');
-  		break;
+			break;
 		case 'iSpeech':
 			get_ivoices();
 			document.getElementById("ispeech").style.display = 'block';
-			element.testtext.value = "Ceci est un texte généré pour tester la traduction";				
-		break;
+			element.testtext.value = "Ceci est un texte généré pour tester la traduction";
+			break;
 		default:
 			document.getElementById("moreoptions").style.display = 'block';
 			element.testtext.value = "Ceci est un texte généré pour tester la traduction";
@@ -254,20 +254,20 @@ function voice_options(voice)
  * ---------------------------------------------------------------------------------------------------------------------
  * Get user defined keyboard shortcut
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 function getHotkeys(keys)
 {
-	return keys.substr(0,keys.lastIndexOf('+')+2)+CharCode(keys.substr(keys.lastIndexOf('+')+2,2));	
+	return keys.substr(0,keys.lastIndexOf('+')+2)+CharCode(keys.substr(keys.lastIndexOf('+')+2,2));
 }
 
 /*
  * ---------------------------------------------------------------------------------------------------------------------
  * Convert's char code to char
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 function CharCode(code)
 {
-	return String.fromCharCode(code).toLowerCase();		
+	return String.fromCharCode(code).toLowerCase();
 }
 
 function _is_update()
@@ -288,7 +288,7 @@ function _is_update()
  * ---------------------------------------------------------------------------------------------------------------------
  * Save user defined options
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 function keyDown(e,kb)
 {
 	out = "";
@@ -302,11 +302,11 @@ function keyDown(e,kb)
 	e.target.value = out + CharCode(code);
 	if(kb == 0)
 	{
-		element.hotkey = out + code;		
+		element.hotkey = out + code;
 	}
 	else
 	{
-		sec_hotkey = out + code;		
+		sec_hotkey = out + code;
 	}
 	e.preventDefault();
 	return false;
@@ -316,7 +316,7 @@ function keyDown(e,kb)
  * ---------------------------------------------------------------------------------------------------------------------
  * Toggle's visibility of specified html element
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 function toggle(id)
 {
 	var elem = document.getElementById(id);
@@ -335,28 +335,28 @@ function toggle(id)
  * ---------------------------------------------------------------------------------------------------------------------
  * Load extension localized messages and descriptions
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 function setLocales()
 {
 	locales = document.getElementsByClassName('locale');
 	locales = Array.prototype.slice.call(locales);
-	
+
 	for(i=0;locales.length;i++)
 	{
 		if(locales[i] === undefined) break; //Fix 4 Uncaught error
 		if(chrome.i18n.getMessage(locales[i].id) != '')
 		{
-				locales[i].innerHTML = chrome.i18n.getMessage(locales[i].id);				
+			locales[i].innerHTML = chrome.i18n.getMessage(locales[i].id);
 		}
 	}
-    element.testtext.value = chrome.i18n.getMessage('lang_testtext');
+	element.testtext.value = chrome.i18n.getMessage('lang_testtext');
 }
 
 /*
  * ---------------------------------------------------------------------------------------------------------------------
  * Get avalible TTS engines
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 function getVoices()
 {
 	var voice = document.getElementById('voice');
@@ -368,7 +368,7 @@ function getVoices()
 		{
 			var opt = document.createElement('option');
 			var name = voiceArray[i].voiceName;
-			
+
 			if (name == options.voice)
 			{
 				opt.setAttribute('selected', '');
@@ -385,12 +385,12 @@ function getVoices()
 function get_ivoices()
 {
 	var request = new XMLHttpRequest();
-	request.onreadystatechange = function() 
+	request.onreadystatechange = function()
 	{
 		if (request.readyState == 4)
 		{
 			// innerText does not let the attacker inject HTML elements.			 
-			voicesContent = JSON.parse(request.responseText, function (key, value) 
+			voicesContent = JSON.parse(request.responseText, function (key, value)
 			{
 				if(key != '' && key != 'eurdutchmale')
 				{
@@ -413,7 +413,7 @@ function get_ivoices()
  * ---------------------------------------------------------------------------------------------------------------------
  * Init main options variables and methods
  * ---------------------------------------------------------------------------------------------------------------------
-*/
+ */
 (function()
 {
 	set_vars(vars);

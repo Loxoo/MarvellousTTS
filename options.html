@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+	<meta charset="utf-8">
 	<meta charset="utf-8" />
 	<title class="locale" id="lang_options">BlindLens - Options</title>
 	<link rel="stylesheet" href="css/reset.css">
@@ -9,130 +9,130 @@
 	<link rel="stylesheet" href="css/widgets.css">
 </head>
 <body>
-	<div id="navigation">
-		<div id="product-name">
-			<h1>Chrome</h1>
-		</div>
-		<div id="nav">
-			<ul>
-				<li class="selected">BlindLens</li>
-			</ul>
-		</div>
+<div id="navigation">
+	<div id="product-name">
+		<h1>Chrome</h1>
 	</div>
-	<div id="content-holder" class="">
-			<div id="page-header">
-				<h1 id="options_title">BlindLens</h1>
-				<div id="app_logo"> </div> 
+	<div id="nav">
+		<ul>
+			<li class="selected">BlindLens</li>
+		</ul>
+	</div>
+</div>
+<div id="content-holder" class="">
+	<div id="page-header">
+		<h1 id="options_title">BlindLens</h1>
+		<div id="app_logo"> </div>
+	</div>
+	<div id="options">
+
+		<div class="fieldset">
+			<div class="title locale" id="lang_playback"></div>
+			<div class="select">
+				<label>
+					<span id="lang_engine" class="locale"></span>&nbsp;
+					<select id="voice" selected name="voice"></select>
+
+				</label>
 			</div>
-			<div id="options">
 
-				<div class="fieldset">
-					<div class="title locale" id="lang_playback"></div>
-					<div class="select">
-						<label>
-			       			<span id="lang_engine" class="locale"></span>&nbsp;
-							<select id="voice" selected name="voice"></select> 
-							
-						</label>
-					</div>
-
-					<div class="range">
-						<label>
-							<span id="lang_volume" class="locale"></span>
-							<input id="volume" type="range" min="0" max="100" value="0"></input>
-							<span id="percents"></span>
-						</label>
-					</div>
-
-					<div id="moreoptions" style="display:none">
-						<div class="range">
-							<label>
-								<span id="lang_rate" class="locale"></span>
-								<input id="rate" type="range" min="0.5" max="4.0" value="1.0" step="0.1"></input>
-								<span id="rateps"></span> 
-								<span id="words">200</span> <span id="lang_wpm" class="locale"></span>
-							</label>
-						</div>
-
-						<div class="range">
-							<label>
-								<span id="lang_pitch" class="locale"></span>
-								<input id="pitch" type="range" min="0.0" max="2.0" value="1.0" step="0.2" ></input>
-								<span id="percents"></span>
-							</label>
-						</div>
-
-						<div class="checkbox">
-      						<label>
-       	 						<input type="checkbox" disabled="disabled" id="enqueue"  /></input>
-								<span id="lang_enqueue" class="locale"></span>
-      						</label>
-    					</div>	
-					</div>
-
-					<div id="ispeech" style="display:none">
-						<div class="range">
-							<label>
-								<span id="lang_rate" class="locale"></span>
-								<input id="irate" type="range" min="-10" max="10" value="5" step="1"></input>
-								<span id="irateps"></span> 
-								~ <span id="iwords"></span> <span id="lang_wpm" class="locale"></span>
-							</label>
-						</div>
-						<div class="select">
-							<label>
-			        			<span></span>&nbsp;
-								<select id="ivoice" name="ivoice"></select>
-							</label>
-						</div>
-					</div>
-				</div>
-
-				<div class="fieldset">
-					<div class="title locale" id="lang_testing"></div>
-					<input type="text" id="testtext" value="Ceci est un texte généré pour tester la traduction"></input>
-					<div id="test"></div>
-				</div>
-
-				<div class="fieldset">
-					<div class="title locale" id="lang_shortcuts"></div>
-					<div class="input">
-						<label>
-							<span class="locale" id="lang_keyboard"></span> 
-							<input type="text" id="hotkeys"></input>
-						</label>
-					</div>
-					<div class="checkbox">
-      					<label>
-        					<input type="checkbox" id="context" /></input>
-							<span class="locale" id="lang_contex"></span>
-      					</label>
-    				</div>					
-					<span class="locale" id="contx_info"></span>
-				</div>
-
-				<div class="fieldset">
-					<div class="title locale" id="lang_input"></div>
-					<div class="checkbox">
-      					<label>
-        					<input type="checkbox" id="speechinput" ></input>
-							<span class="locale" id="lang_stt"></span>
-      					</label>
-    				</div>
-				</div>
-
-				
+			<div class="range">
+				<label>
+					<span id="lang_volume" class="locale"></span>
+					<input id="volume" type="range" min="0" max="100" value="0"></input>
+					<span id="percents"></span>
+				</label>
 			</div>
-				<div class="fieldset">
-					<div class="title" id="lang_paypal">Partager</div>
-					Tu aimes BlindLens ?
-		
-					<a href="https://www.facebook.com/BlindLens/" target="_blank"><img src="images/facebook.png" /></a>
+
+			<div id="moreoptions" style="display:none">
+				<div class="range">
+					<label>
+						<span id="lang_rate" class="locale"></span>
+						<input id="rate" type="range" min="0.5" max="4.0" value="1.0" step="0.1"></input>
+						<span id="rateps"></span>
+						<span id="words">200</span> <span id="lang_wpm" class="locale"></span>
+					</label>
+				</div>
+
+				<div class="range">
+					<label>
+						<span id="lang_pitch" class="locale"></span>
+						<input id="pitch" type="range" min="0.0" max="2.0" value="1.0" step="0.2" ></input>
+						<span id="percents"></span>
+					</label>
+				</div>
+
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" disabled="disabled" id="enqueue"  /></input>
+						<span id="lang_enqueue" class="locale"></span>
+					</label>
 				</div>
 			</div>
-	    </div>
-	  
-	<script type="text/javascript" src="js/languages.js"></script>
-	<script type="text/javascript" src="js/options.js"></script>
+
+			<div id="ispeech" style="display:none">
+				<div class="range">
+					<label>
+						<span id="lang_rate" class="locale"></span>
+						<input id="irate" type="range" min="-10" max="10" value="5" step="1"></input>
+						<span id="irateps"></span>
+						~ <span id="iwords"></span> <span id="lang_wpm" class="locale"></span>
+					</label>
+				</div>
+				<div class="select">
+					<label>
+						<span></span>&nbsp;
+						<select id="ivoice" name="ivoice"></select>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="fieldset">
+			<div class="title locale" id="lang_testing"></div>
+			<input type="text" id="testtext" value="Ceci est un texte généré pour tester la traduction"></input>
+			<div id="test"></div>
+		</div>
+
+		<div class="fieldset">
+			<div class="title locale" id="lang_shortcuts"></div>
+			<div class="input">
+				<label>
+					<span class="locale" id="lang_keyboard"></span>
+					<input type="text" id="hotkeys"></input>
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" id="context" /></input>
+					<span class="locale" id="lang_contex"></span>
+				</label>
+			</div>
+			<span class="locale" id="contx_info"></span>
+		</div>
+
+		<div class="fieldset">
+			<div class="title locale" id="lang_input"></div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" id="speechinput" ></input>
+					<span class="locale" id="lang_stt"></span>
+				</label>
+			</div>
+		</div>
+
+
+	</div>
+	<div class="fieldset">
+		<div class="title" id="lang_paypal">Partager</div>
+		Tu aimes BlindLens ?
+
+		<a href="https://www.facebook.com/BlindLens/" target="_blank"><img src="images/facebook.png" /></a>
+	</div>
+</div>
+</div>
+
+<script type="text/javascript" src="js/languages.js"></script>
+<script type="text/javascript" src="js/options.js"></script>
 </body>
 </html>
