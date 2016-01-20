@@ -5,6 +5,7 @@
  * ---------------------------------------------------------------------------------------------------------------------
  * Defining main background variables
  * ---------------------------------------------------------------------------------------------------------------------
+<<<<<<< HEAD
  */
 var i = 0,
 	words = 0,
@@ -19,6 +20,28 @@ current = 0,
 	google_tts = 'http://http://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&client=blindlens&prev=input&tl=',
 
 	options = JSON.parse(localStorage.getItem("options"));
+=======
+*/
+	var i = 0,
+		words = 0,
+		audio = [],
+		volume = 0;
+		current = 0,
+		debug = false, // make this true if you want to debug SpeakIt
+		state = 'ready', // curent playing state (playing OR paused)
+		reloaded = [],
+		datastack = [],
+		textstack = '',
+<<<<<<< HEAD
+		google_tts = 'http://http://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&client=blindlens&prev=input&tl=',
+		
+=======
+		ispeech_api_key = '59e482ac28dd52db23a22aff4ac1d31e',
+		google_tts = 'http://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&client=speakit&prev=input&tl=',
+		ispeech_tts = 'http://api.ispeech.org/api/rest?format=mp3&action=convert&apikey=',
+>>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
+		options = JSON.parse(localStorage.getItem("options"));
+>>>>>>> 5c68518f719f66c7e1856f0b31e73d2bb371a202
 /*
  * ---------------------------------------------------------------------------------------------------------------------
  * Get current version
@@ -41,7 +64,38 @@ function getVersion()
 	{
 		voice = (options != null && options.voice !== undefined) ? options.voice : 'iSpeech';
 
+<<<<<<< HEAD
 		vupdate = (options == null ? "installed" : "updated");
+=======
+			vupdate = (options == null ? "installed" : "updated");
+
+		  	options =
+			{
+<<<<<<< HEAD
+				voice: "Google français",
+				version: getVersion(),
+	    		volume: 1.0,
+=======
+				voice: voice,
+				ivoice : "usenglishfemale",
+	            version: getVersion(),
+	    		volume: 0.5,
+>>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
+	    		irate : 0,
+				rate: 1.0,
+				pitch: 1.0,
+				enqueue: false,
+				context: true,			
+<<<<<<< HEAD
+			
+=======
+				logo : true,
+>>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
+				speechinput : false,
+				collect: true,
+				hotkeys:"ctrl + shift + 83" // Ctrl+Shift+S default kb shortcut
+			}
+>>>>>>> 5c68518f719f66c7e1856f0b31e73d2bb371a202
 
 		options =
 		{
@@ -298,7 +352,23 @@ function contextMenu(selection)
 		{
 			if(options.voice == 'BlindLens')
 			{
+<<<<<<< HEAD
 				speakIt(filterText(selection.selectionText.toString()));
+=======
+<<<<<<< HEAD
+				if(options.voice == 'BlindLens')
+=======
+				if(options.voice == 'BlindLens'  || options.voice == 'iSpeech')
+>>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
+				{
+					speakIt(filterText(selection.selectionText.toString()));
+				}
+				else
+				{
+					TTS_Speak(selection.selectionText.toString(),true);
+				}
+				textstack = selection.selectionText.toString();
+>>>>>>> 5c68518f719f66c7e1856f0b31e73d2bb371a202
 			}
 			else
 			{

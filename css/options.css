@@ -86,6 +86,7 @@ h1
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
+<<<<<<< HEAD
 #content-holder #page-header
 {
 	z-index:3;
@@ -116,6 +117,53 @@ h1
 	padding:53px 0px 0px 0px;
 	color: #303942;
 }
+=======
+	#content-holder #page-header
+	{
+		z-index:3;
+		height:53px;
+		position:fixed;
+		min-width:718px;
+		max-width:718px;
+		background-image: -webkit-linear-gradient(white, white 40%, rgba(255, 255, 255, 0.9));
+		padding:21px 0px 0px 0px;
+		border-bottom: 1px solid #EEE;
+	}
+		#content-holder #page-header #app_logo
+		{
+<<<<<<< HEAD
+			width:200px;
+			height:150px;
+=======
+			width:111px;
+			height:37px;
+>>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
+			float:right;
+			cursor:pointer;
+			position: relative;
+			margin:-30px 0px 0px 0px;
+<<<<<<< HEAD
+			
+			background:url('../images/icon-half.jpg') no-repeat;
+		}
+			
+=======
+			-webkit-filter: grayscale(1);
+			background:url('../images/icon-half.png') no-repeat;
+		}
+			#content-holder #page-header:hover #app_logo
+			{
+				-webkit-filter: grayscale(0);				
+			}
+>>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
+	#options
+	{
+		min-width:718px;
+		max-width:718px;
+		padding:53px 0px 0px 0px;
+		color: #303942;
+	}
+>>>>>>> 5c68518f719f66c7e1856f0b31e73d2bb371a202
 /*----------------------------------------------------------------------------------------------------------------------
 						  			EXTEND CUSTOM INPUT ELEMENT CLASSES
 ----------------------------------------------------------------------------------------------------------------------*/
