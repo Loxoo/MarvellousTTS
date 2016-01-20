@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
    "ALT_APPDESC": {
       "message": "Remplacez les images par leur texte de substitution."
    },
@@ -270,8 +269,6 @@
    "title": {
       "message": "Convertir texte en parole"
    },
-=======
->>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
    "contx_info": {
       "message": "Redemarrer le navigateur Chrome pour que les changements prennent effets."
    },
@@ -349,9 +346,5 @@
    },
    "title": {
       "message": "Convertir texte en parole"
-<<<<<<< HEAD
    }   
-=======
-   }
->>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
 }

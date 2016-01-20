@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
    "ALT_APPDESC": {
       "message": "Replace images with their alt text."
    },
@@ -191,84 +190,5 @@
    },
    "LONGDESC_OPTIONS": {
       "message": "Options"
-=======
-   "contx_info": {
-      "message": "Redemarrer le navigateur Chrome pour que les changements prennent effets."
-   },
-   "desc": {
-      "message": "Fatigue de lire? BlindLens Converti le texte en parole ainsi vous n'avez plus а le lire."
-   },
-   "lang_contex": {
-      "message": "Activer les raccourcis du menu contextuelle de BlindLens."
-   },
-   "lang_donate": {
-      "message": "Faire Une Donation"
-   },
-   "lang_engine": {
-      "message": "Moteur de conversion de texte en parole"
-   },
-   "lang_enqueue": {
-      "message": "Activer le mode de mise en liste de travail "
-   },
-   "lang_error": {
-      "message": "Vous n'entendez rien? Clicquez ici!"
-   },
-   "lang_input": {
-      "message": "Preferences d'entree Vocale"
-   },
-   "lang_keyboard": {
-      "message": "Raccourci clavier"
-   },
-   "lang_options": {
-      "message": "BlindLens! - Options"
-   },
-   "lang_paypal": {
-      "message": "Donation PayPal"
-   },
-   "lang_pitch": {
-      "message": "timbre de voix"
-   },
-   "lang_playback": {
-      "message": "Preferences d'ecoute"
-   },
-   "lang_rate": {
-      "message": "Vitesse d'elocution"
-   },
-   "lang_save": {
-      "message": "Sauvegarder"
-   },
-   "lang_shortcuts": {
-      "message": "Preferences des raccourcis"
-   },
-   "lang_showpaypal": {
-      "message": "Montrer le bouton de Donation via Paypal."
-   },
-   "lang_stt": {
-      "message": "Activer la Commande vocale."
-   },
-   "lang_testing": {
-      "message": "Test"
-   },
-   "lang_testtext": {
-      "message": "Ceci est un test pour l'extension de Goole Chrome denommee BlindLens"
-   },
-   "lang_voices": {
-      "message": "Vous desirez d'autre voix?"
-   },
-   "lang_volume": {
-      "message": "Volume par defaut"
-   },
-   "lang_wpm": {
-      "message": "Mots/minute"
-   },
-   "paypalinfo": {
-      "message": "BlindLens! est completement gratuit"
-   },
-   "tip": {
-      "message": "Vos preferences ont ete sauvegardees avec succes."
-   },
-   "title": {
-      "message": "Convertir texte en parole"
->>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
    }
 }

@@ -18,11 +18,7 @@ var element = {},
 		vars = [
 					'rate','test', 'rateps', 'irateps', 'pitch', 'voice', 'ivoice', 'volume', 'context', 'speechinput',
 					'words', 'iwords', 'lang_voices', 'hotkeys', 'enqueue', 'percents', 'testtext', 'language', 'hotkey',
-<<<<<<< HEAD
 					'lang_voices', 'irate','options_title', 'app_logo', 'lang_paypalinfo', 'paypal_coffee', 
-=======
-					'lang_voices', 'irate','options_title', 'logo', 'app_logo', 'lang_paypalinfo', 'paypal_coffee', 
->>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
 					'paypal_new_version', 'paypal_supporter'
 				];
 >>>>>>> 5c68518f719f66c7e1856f0b31e73d2bb371a202
@@ -98,8 +94,8 @@ function init_listeners()
 		save_options();
 	});
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -110,6 +106,8 @@ function init_listeners()
 	});
 >>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
 >>>>>>> 5c68518f719f66c7e1856f0b31e73d2bb371a202
+=======
+>>>>>>> 1ef9d23ab6672dc90a18f7ee3c1493a076b52276
 
 	element.ivoice.addEventListener('change', function()
 	{
@@ -212,8 +210,8 @@ function save_options()
 		pitch :  element.pitch.value,
 		enqueue :  element.enqueue.checked,
 		speechinput : element.speechinput.checked,
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -221,6 +219,8 @@ function save_options()
 		logo : element.logo.checked,
 >>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
 >>>>>>> 5c68518f719f66c7e1856f0b31e73d2bb371a202
+=======
+>>>>>>> 1ef9d23ab6672dc90a18f7ee3c1493a076b52276
 		context: element.context.checked,
 		hotkeys: element.hotkey,
 		volume : parseFloat(element.volume.value/100)
@@ -254,12 +254,15 @@ function restore_options()
 	element.words.innerHTML = (200*rate.value).toFixed(0);
 	element.iwords.innerHTML = 30*(parseInt(irate.value)+11);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 	element.logo.checked = options.logo;
 >>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
 >>>>>>> 5c68518f719f66c7e1856f0b31e73d2bb371a202
+=======
+>>>>>>> 1ef9d23ab6672dc90a18f7ee3c1493a076b52276
 
 	//dspl_info = (options.logo)? 'none' : 'block';
 	//element['lang_paypalinfo'].style.display = dspl_info;
@@ -427,12 +430,15 @@ function get_ivoices()
 {
 	var request = new XMLHttpRequest();
 <<<<<<< HEAD
+<<<<<<< HEAD
 	request.onreadystatechange = function()
 =======
 <<<<<<< HEAD
 =======
 	//request.open("GET", "http://www.ispeech.org/key?key=59e482ac28dd52db23a22aff4ac1d31e&voices&output=json&labels", true);
 >>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
+=======
+>>>>>>> 1ef9d23ab6672dc90a18f7ee3c1493a076b52276
 	request.onreadystatechange = function() 
 >>>>>>> 5c68518f719f66c7e1856f0b31e73d2bb371a202
 	{
@@ -469,10 +475,5 @@ function get_ivoices()
 	init_listeners();
 	restore_options();
 	getVoices();
-<<<<<<< HEAD
 })();
 	setLocales();
-=======
-	setLocales();
-})();
->>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
