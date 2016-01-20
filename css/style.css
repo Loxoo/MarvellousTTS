@@ -64,3 +64,92 @@ body {
 	border-radius: 40px;
 	opacity: 1;
 }
+@font-face {
+	font-family: "code_bold";
+	src: url("font/code_bold.otf");
+}
+	
+body{
+	width: 740px;
+	font-family: "code_bold";
+	font-size: 26px;
+	color: white;
+	background: black;
+}
+
+#choix {
+    margin:4px;
+   
+    float:left;
+}
+
+#choix label {
+    float:left;
+    width:130px;
+    background-color:#EFEFEF;
+    border-top:1px solid #D0D0D0;
+    border-bottom:1px solid #D0D0D0;
+    overflow:auto;
+}
+
+.gauche{
+	border-left:1px solid #D0D0D0;
+}
+
+.droite{
+	border-right:1px solid #D0D0D0;
+}
+
+#choix label span {
+    text-align:center;
+    font-size: 32px;
+    padding:10px 0px;
+    display:block;
+}
+
+#choix label input {
+    position:absolute;
+    top:-20px;
+}
+
+#choix input:checked + span {
+    background-color:#404040;
+    color:white;
+}
+
+#choix .green {
+    background-color:#F22613;
+    color:#F22613;
+}
+
+#choix .red {
+    background-color:#87D37C;
+    color:#87D37C;
+}
+
+.cadre{
+	width: 100%;
+}
+
+.position_cadre{
+	float: left;
+}
+
+.clear{
+	clear: both;
+}
+
+.titre{
+	width: 450px;
+	padding: 16px 0 0 10px;
+	font-size: 36px;
+}
+
+.cadre_switch{
+	padding: 0 0 10px 0;
+}
+
+.copyright{
+	text-align: center;
+	font-size: 20px;
+}

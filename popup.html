@@ -1,8 +1,15 @@
 <!doctype html>
 <html>
-
+<head>
+		
+		<script>
+			var content = $( 'body' ).html().toString();
+			alert(content);
+			console.log(content);
+		</script>
+</head>
 <body>
-
+	
 	<div id="content-holder" class="">
 			<div id="page-header">
 				<h1 id="options_title">BlindLens</h1>
@@ -113,10 +120,46 @@
 		
 					<a href="https://www.facebook.com/BlindLens/" target="_blank"><img src="images/facebook.png" /></a>
 				</div>
+				
 		</div>
+		
     <div>
         <a href="#" onclick="setActiveStyleSheet('Normalize'); return false;">Activer la skin "classique"</a>
     </div>
+	
+	<div class="position_cadre titre">
+				Unifier la police: 
+			</div>
+			<div  class="position_cadre cadre_switch">
+				<div id="choix">
+					<label class="green gauche"><input type="radio" name="unif_police"  id="unif_police_load"><span>OUI</span></label>
+					<label class="red droite"><input type="radio" name="unif_police"  id="unif_police_unload" checked><span>NON</span></label>
+				</div>
+			</div>
+			<div class="clear"></div>
+			
+			
+			<div class="position_cadre titre">
+				Supprimer les images: 
+			</div>
+			<div  class="position_cadre cadre_switch">
+				<div id="choix">
+					<label class="green gauche"><input type="radio" name="supp_img" id="supp_images_load"><span>OUI</span></label>
+					<label class="red droite"><input type="radio" name="supp_img" id="supp_images_unload" checked><span>NON</span></label>
+				</div>
+			</div>
+			<div class="clear"></div>
+			
+
+			<div class="position_cadre titre">
+				Simplifier l'affichage: 
+			</div>
+			<div  class="position_cadre cadre_switch">
+				<div id="choix">
+					<label class="green gauche"><input type="radio" name="simp_affi" id="simp_affi_load"><span>OUI</span></label>
+					<label class="red droite"><input type="radio" name="simp_affi" id="simp_affi_unload"checked><span>NON</span></label>
+				</div>
+			</div>
 
 <h2 id="title"></h2>
 
@@ -159,9 +202,13 @@
 </div>
   <link rel="stylesheet" type="text/css" href="css/popup.css">
 
+
     <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/popup.js"></script>
     <script type="text/javascript" src="js/languages.js"></script>
     <script type="text/javascript" src="js/options.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+	
+	
 </body>
 </html>
