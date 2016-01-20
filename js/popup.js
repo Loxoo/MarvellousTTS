@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Copyright (c) 2014 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
@@ -143,6 +144,8 @@ function init() {
 
 window.addEventListener('load', init, false);
 
+=======
+>>>>>>> b0ce45b6833fb01ffb16ab1027ed04fc3f7b5a60
 /*
  
  * This file contains code that displays Grafical User Interface
