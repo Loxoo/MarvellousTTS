@@ -204,7 +204,7 @@ function save_options()
 function restore_options()
 {
 	options = JSON.parse(localStorage.getItem("options"));
-	element.options_title.innerHTML = 'BlindLens'+_is_update()+' v'+getVersion();
+	element.options_title.innerHTML = "Don't Blink"+_is_update()+' v'+getVersion();
 	element.speechinput.checked = options.speechinput;
 	element.context.checked = options.context;
 	element.enqueue.checked = options.enqueue;
@@ -236,7 +236,7 @@ function voice_options(voice)
 
 	switch(voice)
 	{
-		case 'BlindLens!':
+		case "Don't Blink":
 			element.testtext.value = chrome.i18n.getMessage('lang_testtext');
   		break;
 		case 'iSpeech':
