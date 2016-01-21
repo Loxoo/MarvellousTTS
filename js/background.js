@@ -93,7 +93,7 @@ function init() {
   }, false);
 
   if (navigator.appVersion.indexOf('Mac') != -1) {
-    chrome.browserAction.setTitle({'title': 'High Contrast (Cmd+Shift+F11)'});
+    chrome.browserAction.setTitle({'title': 'MANGE MA QUEUE (Cmd+Shift+F11)'});
   }
 }
 
