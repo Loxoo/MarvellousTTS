@@ -219,9 +219,6 @@ function restore_options()
 	element.irateps.innerHTML = 'x'+irate.value
 	element.words.innerHTML = (200*rate.value).toFixed(0);
 	element.iwords.innerHTML = 30*(parseInt(irate.value)+11);
-
-	//dspl_info = (options.logo)? 'none' : 'block';
-	//element['lang_paypalinfo'].style.display = dspl_info;
 }
 
 /*
@@ -289,28 +286,6 @@ function _is_update()
  * Save user defined options
  * ---------------------------------------------------------------------------------------------------------------------
 */
-function keyDown(e,kb)
-{
-	out = "";
-	if(e.ctrlKey) out += "ctrl + ";
-	if(e.shiftKey) out += "shift + ";
-	if(e.altKey) out += "alt + ";
-	if(e.metaKey) out += "meta + ";
-
-	code = e.keyCode;
-	code = code == 16 ||code == 17 ||code == 18?null:code;
-	e.target.value = out + CharCode(code);
-	if(kb == 0)
-	{
-		element.hotkey = out + code;		
-	}
-	else
-	{
-		sec_hotkey = out + code;		
-	}
-	e.preventDefault();
-	return false;
-}
 
 /*
  * ---------------------------------------------------------------------------------------------------------------------
@@ -382,32 +357,7 @@ function getVoices()
 	});
 }
 
-function get_ivoices()
-{
-	var request = new XMLHttpRequest();
-	request.onreadystatechange = function() 
-	{
-		if (request.readyState == 4)
-		{
-			// innerText does not let the attacker inject HTML elements.			 
-			voicesContent = JSON.parse(request.responseText, function (key, value) 
-			{
-				if(key != '' && key != 'eurdutchmale')
-				{
-					var option=document.createElement("option");
-					option.value = key;
-					option.text= value;
-					if (key == options.ivoice)
-					{
-						option.setAttribute('selected', '');
-					}
-					element.ivoice.appendChild(option);
-				}
-			});
-		}
-	}
-	request.send();
-}
+
 
 /*
  * ---------------------------------------------------------------------------------------------------------------------

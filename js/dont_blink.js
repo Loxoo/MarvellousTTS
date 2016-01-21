@@ -1,11 +1,4 @@
-/*
 
- * This file contains SpeakIt core functions 
-
- * ---------------------------------------------------------------------------------------------------------------------
- * Defining main background variables
- * ---------------------------------------------------------------------------------------------------------------------
-*/
 	var i = 0,
 		words = 0,
 		audio = [],
@@ -146,7 +139,7 @@
 	function pauseAudio() // Pause Audio
 	{
 		state = 'paused';
-		if(options.voice == 'BlindLens' || options.voice == 'iSpeech')
+		if(options.voice == "Dont Blink" || options.voice == 'iSpeech')
 		{
 			audio[current].pause(); // pause current audio channel
 			if(debug) console.log('Audio channel: '+current+' was paused.');
@@ -156,7 +149,7 @@
 	function resumeAudio() // resume paused audio
 	{
 		options = JSON.parse(localStorage.getItem("options")); //must fix!
-		if(options.voice == 'BlindLens' || options.voice == 'iSpeech')
+		if(options.voice == "Dont Blink" || options.voice == 'iSpeech')
 		{
 			if(audio[current] !== undefined) // stupid bug but i'll fix that :) 
 			{
@@ -184,7 +177,7 @@
 	function replayAudio() // replay audio
 	{
 		options = JSON.parse(localStorage.getItem("options")); //must fix
-		if(options.voice == 'BlindLens'  || options.voice == 'iSpeech')
+		if(options.voice == "Dont Blink"  || options.voice == 'iSpeech')
 		{
 			speakIt(filterText(textstack));
 		}
@@ -296,7 +289,7 @@
 		{
 			if(state == 'ready')
 			{
-				if(options.voice == 'BlindLens')
+				if(options.voice == "Dont Blink")
 				{
 					speakIt(filterText(selection.selectionText.toString()));
 				}
@@ -351,7 +344,7 @@
 				}
 				else
 				{
-					if(options.voice == 'BlindLens' || options.voice == 'iSpeech')
+					if(options.voice == "Dont Blink" || options.voice == 'iSpeech')
 					{
 						if(state == 'paused')
 						{
@@ -389,98 +382,6 @@
  * SpeakIt core function - Use It Wisely :) :) 
  * ---------------------------------------------------------------------------------------------------------------------
 */
-	function speakIt(text)
-	{
-	    chrome.tabs.detectLanguage(null,function(lang) //detect page language
-		{
-			options = JSON.parse(localStorage.getItem("options"));
-			i = 0; //reseting global variables
-			current = 0;
-
-			state = 'playing';
-
-			popups = chrome.extension.getViews({type: "popup"});
-			if (popups.length != 0)
-			{
-
-				var popup = popups[0];
-				popup.sendState(state);
-			}
-
-			url = google_tts+lang+'&q='; // assemble full url for Google Network TTS API
-			if(options.voice == 'iSpeech') // iSpeech TTS API
-			{
-				if(options.ivoice == '') { options.ivoice = 'usenglishfemale'; }
-				url = ispeech_tts+ispeech_api_key+'&speed='+options.irate+'&voice='+options.ivoice+'&text=';
-			}
-
-			words = text.length;
-			
-			audio = new Array();
-			audio[0] = new Audio(); // defining two new audo objects each time
-			audio[1] = new Audio();
-			
-			playAudio(i,url+text[i+1],1,url+text[i]); // Start first audio
-			
-			//Audio event listeners
-			audio[0].addEventListener("ended", function()
-			{
-				++i;
-				if(i < text.length)
-				{
-					playAudio(1,url+text[i+1],0,'');
-				}
-				else
-				{
-					showReplay();
-				}
-			}, true);
-			
-			audio[1].addEventListener("ended", function() 
-			{
-				++i;
-				if(i < text.length)
-				{
-					playAudio(0,url+text[i+1],0,'');
-				}
-				else
-				{
-					showReplay();
-				}
-			}, true);
-			
-			//Send audio duration when audio start to playing
-			audio[0].addEventListener("playing", function() 
-			{
-				sendDuration(0);
-			});
-			audio[1].addEventListener("playing", function() 
-			{
-				sendDuration(1);
-			});
-			
-			//On audio load error caused by Google bot protection
-			audio[0].addEventListener("error", function() 
-			{
-				handleError(0);
-			});	
-			audio[1].addEventListener("error", function() 
-			{
-				handleError(1);
-			});
-				
-			//On audio load error caused by Google bot protection
-			audio[0].addEventListener("staled", function() 
-			{
-				handleError(0);
-			});	
-			audio[1].addEventListener("staled", function() 
-			{
-				handleError(1);
-			});	
-		});
-	}
-
 /*
  * ---------------------------------------------------------------------------------------------------------------------
  *  Speak with new TTS Chrome API
@@ -519,113 +420,3 @@
 			}
 		);	
 	}
-
-/*
- * ---------------------------------------------------------------------------------------------------------------------
- *  Function for filtering text from "bad" characters and preppare text for Google Text to Speech API
- * ---------------------------------------------------------------------------------------------------------------------
-*/	
-	function split(string,maxlength)
-	{
-	    var result = [];
-	    (function(string)
-	    {
-	        var index = string.substring(maxlength).indexOf(" ");
-	        if( index == -1 ) return string ? result.push(string.split(' ').join('+')) : null;
-	        result.push( string.substring(0, index + maxlength+1).trim().split(' ').join('+'));
-	        arguments.callee.call(window, string.substring(index + maxlength+1));
-	    })(string);
-	       return result;
-	}
-
-	function beautify(string)
-	{
-	    return string.replace(/([+.,])$/, '').replace(/^([+.,])/, '');
-	}
-
-	function filterText(text)
-	{
-	    var j = 0,
-	    str = [],
-	    tmpstr =[],
-	    maxlength = 90, // Max length of one sentence this is Google's fault :)
-	    badchars = ["+","#","@","-","<",">","\n","!","?",":","&",'"',"  ","。","`"],
-	    replaces = [" plus "," sharp "," at ","","","","",".",".","."," and "," "," ",".",""];
-			
-	    for(var i in badchars) // replacing bad chars
-	    {
-	    	text = text.split(badchars[i]).join(replaces[i]);		
-	    }
-
-	    str = text.split(/([.,!?:])/i); // this is where magic happens :) :)
-		
-	    for(var i in str) //join and group sentences
-	    {
-	        if(tmpstr[j] === undefined)
-		{
-	            tmpstr[j] = '';
-		}
-			
-	        if((tmpstr[j]+str[i]).length < maxlength)
-	        {
-	            tmpstr[j] = tmpstr[j]+str[i].split(' ').join('+');
-	        }
-	        else
-	        {
-	            tmpstr[j] = beautify(tmpstr[j]);
-	            
-	            if(str[i].length < maxlength)
-	            {
-	                j++;
-	                tmpstr[j]=beautify(str[i].split(' ').join('+'));
-	            }
-	            else
-	            {
-	                sstr = split(str[i],maxlength);
-	                for(x in sstr)
-	                {
-	                    j++;
-	                    tmpstr[j] = beautify(sstr[x]);
-	                }
-	            }
-	        }
-	    }
-	    return tmpstr.filter(String);
-	}
-
-/*
- * ---------------------------------------------------------------------------------------------------------------------
- *  SpeakIt basic TTS engine functions
- * ---------------------------------------------------------------------------------------------------------------------
-*/	
-	var speakListener = function(utterance, options, sendTtsEvent)
-	{
-	    // sendTtsEvent({'event_type': 'start', 'charIndex': 0})
-		nowPlaying();
-		speakIt(filterText(utterance));
-	    //sendTtsEvent({'event_type': 'end', 'charIndex': utterance.length})
-	};
-
-	var stopListener = function()
-	{
-	  pauseAudio();
-	};
-
-	function log(error)
-	{
-		if(debug) console.log(error);
-	}
-
-	function reload()
-	{
-		updateNumber(0);
-		window.location.reload();
-	}
-
-/*
- * ---------------------------------------------------------------------------------------------------------------------
- *  Add listeners and register SpeakIt as TTS engine
- * ---------------------------------------------------------------------------------------------------------------------
-*/	
-	chrome.ttsEngine.onSpeak.addListener(speakListener);
-	chrome.ttsEngine.onStop.addListener(stopListener);
