@@ -18,7 +18,13 @@
    "minimum_chrome_version": "14",
    "name": "Don't Blink",
    "options_page": "options.html",
-   
+    "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/highcontrast.css" ],
+      "js": [ "js/highcontrast.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
    "permissions": [ "\u003Call_urls>",
    "contextMenus", 
    "ttsEngine", 
