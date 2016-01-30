@@ -30,51 +30,7 @@ h1
 		font-weight: normal;
 		-webkit-user-select: none;
 	}
-/*----------------------------------------------------------------------------------------------------------------------
-						  						NAVIGATION
-----------------------------------------------------------------------------------------------------------------------*/
-#navigation
-{
-	width:155px;
-	height:100%;
-	z-index:2;
-	position: fixed;
-}
-	#navigation #product-name
-	{
-		padding: 21px 0px 0px 23px;
-	}
-	#navigation #nav
-	{
 
-	}
-		#navigation #nav ul
-		{
-			list-style-type: none;
-			margin:18px 0px 0px 0px;
-		}
-			#navigation #nav ul li
-			{
-				padding:8px 0px 8px 18px;
-				border-left:6px solid transparent;
-			}
-				#navigation #nav ul .selected
-				{
-					color:#464E5A;
-					padding:0px 0px 7px 30px;
-					border-left:6px solid #464E5A;
-				}
-				#navigation #nav ul li a
-				{
-					border: 0;
-					margin: 0;
-					padding: 0;
-					color: #999;
-					cursor: pointer;
-					text-decoration:none;
-					font: 12px 'DejaVu Sans', Arial, sans-serif;
-					line-height: 17px;
-				}
 /*----------------------------------------------------------------------------------------------------------------------
 						  					CONTENT AND PAGE HEADER
 ----------------------------------------------------------------------------------------------------------------------*/
@@ -82,7 +38,6 @@ h1
 {
 	width:100%;
 	height:100%;
-	padding:0px 0px 0px 145px;
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
@@ -97,7 +52,7 @@ h1
 		padding:21px 0px 0px 0px;
 		border-bottom: 1px solid #EEE;
 	}
-		#content-holder #page-header #app_logo
+		#content-holder #page-header 
 		{
 			width:200px;
 			height:150px;
@@ -106,16 +61,9 @@ h1
 			position: relative;
 			margin:-30px 0px 0px 0px;
 			
-			background:url('../images/icon-half.jpg') no-repeat;
 		}
 			
-	#options
-	{
-		min-width:718px;
-		max-width:718px;
-		padding:53px 0px 0px 0px;
-		color: #303942;
-	}
+
 /*----------------------------------------------------------------------------------------------------------------------
 						  			EXTEND CUSTOM INPUT ELEMENT CLASSES
 ----------------------------------------------------------------------------------------------------------------------*/
@@ -127,10 +75,7 @@ h1
 	border-left:2px solid transparent;
 	-webkit-transition: border 0.2s linear;
 }
-	.fieldset:hover
-	{
-		border-color:#464E5A;
-	}
+	
 	.fieldset .title
 	{
 		margin:0px 0px 0px -20px;
@@ -250,16 +195,19 @@ input[type='range']::-webkit-slider-thumb::before {
 #test
 {
 	display:inline-block;
-	background: url(../small_icon.png) no-repeat;
 	cursor:pointer;
 	width:25px;
 	height:20px;
 	margin:10px 0px -7px 0px;
 	-webkit-transform: rotate(180deg);
+	background:url('../images/play.png') no-repeat;
 }
 #testtext
 {
-	width:450px;
+	width: 450px;
+    margin-left: 4%;
+    margin-top: 3%;
+    font-family: 'Nova Round', cursive;
 }
 .range label span:first-child, .select label span:first-child, .input label span:first-child
 {
@@ -294,31 +242,133 @@ input[type='range']::-webkit-slider-thumb::before {
 		color:#303942;
 	}
 
-#paypalinfo
-{
-	margin:10px 0px 0px 0px;
-	font-size:120%;
+img.logoAPP {
+
+	display: block;
+    width: 17%;
+    margin: 1% Auto;
 }
-#donations
-{
-	padding:10px;
+
+h3.params, h3.params2 {
+	font-family: 'Nova Round', cursive;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 4%;
 }
-	#donations > div 
-	{
-		width:151px;
-		height:30px;
-		cursor:pointer;
-		display:inline-block;
-	}
-	#donations #paypal_coffee
-	{
-		background:url('/images/donate-button-small.png');
-	}
-	#donations #paypal_new_version
-	{
-		background:url('/images/version-button.png');
-	}
-	#donations #paypal_supporter
-	{
-		background:url('/images/supporter-button.png');
-	}
+
+
+h2#title{
+	font-family: 'Nova Round', cursive;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 4%;
+}
+
+select#voice{
+	margin-left: 3%;
+}
+
+h2#options {
+    font-family: 'Nova Round', cursive;
+    text-align: center;
+    font-size: 45px;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+}
+ .options{
+ 	background-color: red;
+ }
+
+
+ .content {
+    display: block;
+    margin: 3% auto;
+    width: 55%;
+    border: solid 1px #E5E5E5;
+    border-radius: 7px;
+    height: 1250px;
+    background-color: #e5e5e5;
+    margin-bottom: 0px;
+}
+
+ h2.title {
+ 	font-family: 'Nova Round', cursive;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 5%;
+}
+
+img.play {
+    width: 3%;
+}
+
+span#percents{
+	font-family: 'Nova Round', cursive;
+
+}
+
+h3.params2 {
+    margin-left: 5%;
+}
+
+input#hotkeys {
+    margin-left: 3%;
+}
+
+label {
+    margin-left: 5%;
+    width: 100%;
+}
+
+label.green.gauche {
+    margin-left: 9%;
+}
+
+label.affic {
+    margin-left: 3%;
+}
+
+#normal {
+    margin-left: 35%;
+}
+
+button#make_default {
+    display: block;
+    margin: 5% auto;
+    height: 50px;
+    width: 550px;
+}
+
+span#default {
+    font-family: 'Nova Round', cursive;
+    font-size: 18px;
+}
+
+button#toggle {
+    display: block;
+    margin: 5% auto;
+    height: 50px;
+    width: 550px;
+    margin-bottom: 0%;
+}
+
+img#logofooter {
+    width: 5%;
+    display: block;
+    margin: 1% auto;
+}
+
+p#footer {
+    text-align: center;
+    font-size: 13px;
+     font-family: 'Nova Round', cursive;
+}
+
+img#play {
+    height: 17px;
+    -webkit-transform: rotate(180deg);
+}
+
+
+

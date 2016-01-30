@@ -7,30 +7,32 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/options.css">
 	<link rel="stylesheet" href="css/widgets.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Nova+Round' rel='stylesheet' type='text/css'>
+
+
 </head>
 <body>
-	<div id="navigation">
-		<div id="product-name">
-			<h1>Chrome</h1>
-		</div>
-		<div id="nav">
-			<ul>
-				<li class="selected">Don't Blink</li>
-			</ul>
-		</div>
-	</div>
 	<div id="content-holder" class="">
-			<div id="page-header">
-				<h1 id="options_title">Don't Blink</h1>
-				<div id="app_logo"> </div> 
-			</div>
-			<div id="options">
+				<img class="logoAPP" src="DontBlink-logo.png" alt="Logo Dont Blink">
 
+
+			<div class="options">
+				<h2 id="options">Options</h2>
+			</div>
+
+
+
+
+<div class="content">
+
+
+					<h2 class="title">Préference d'écoute</h2>
 				<div class="fieldset">
-					<div class="title locale" id="lang_playback"></div>
 					<div class="select">
+					
 						<label>
-			       			<span id="lang_engine" class="locale"></span>&nbsp;
+						<h3 class="params">Langue D'écoute</h3>
 							<select id="voice" selected name="voice"></select> 
 							
 						</label>
@@ -38,7 +40,7 @@
 
 					<div class="range">
 						<label>
-							<span id="lang_volume" class="locale"></span>
+							<h3 class="params">Volume par défault</h3>
 							<input id="volume" type="range" min="0" max="100" value="0"></input>
 							<span id="percents"></span>
 						</label>
@@ -47,7 +49,7 @@
 					<div id="moreoptions" style="display:none">
 						<div class="range">
 							<label>
-								<span id="lang_rate" class="locale"></span>
+								<h3 class="params">Vitesse d'élocution</h3>
 								<input id="rate" type="range" min="0.5" max="4.0" value="1.0" step="0.1"></input>
 								<span id="rateps"></span> 
 								<span id="words">200</span> <span id="lang_wpm" class="locale"></span>
@@ -56,7 +58,7 @@
 
 						<div class="range">
 							<label>
-								<span id="lang_pitch" class="locale"></span>
+								<h3 class="params">Timbre de voix</h3>
 								<input id="pitch" type="range" min="0.0" max="2.0" value="1.0" step="0.2" ></input>
 								<span id="percents"></span>
 							</label>
@@ -64,6 +66,7 @@
 
 						<div class="checkbox">
       						<label>
+      						<h3 class="params"></h3>
        	 						<input type="checkbox" disabled="disabled" id="enqueue"  /></input>
 								<span id="lang_enqueue" class="locale"></span>
       						</label>
@@ -88,18 +91,23 @@
 					</div>
 				</div>
 
-				<div class="fieldset">
-					<div class="title locale" id="lang_testing"></div>
-					<input type="text" id="testtext" value="Ceci est un texte généré pour tester la traduction"></input>
-					<div id="test"></div>
-				</div>
+				
+					<h2 class="title">Test</h2>
+					<input type="text" id="testtext" value="Ceci est un texte généré pour tester la voix"></input>
+					<div id="test"><img id="play" src="images/play.png" alt="">
+					</div>
+				
 
-				<div class="fieldset">
-					<div class="title locale" id="lang_shortcuts"></div>
+
+
+
+				
+					<h2 class="title">Préférence de raccourcis</h2>
 					<div class="input">
-						<label>
-							<span class="locale" id="lang_keyboard"></span> 
+							<h3 class="params2">Raccourci clavier</h3>
+
 							<input type="text" id="hotkeys"></input>
+							<label>
 						</label>
 					</div>
 					<div class="checkbox">
@@ -109,31 +117,112 @@
       					</label>
     				</div>					
 					<span class="locale" id="contx_info"></span>
-				</div>
+			
 
-				<div class="fieldset">
-					<div class="title locale" id="lang_input"></div>
+				
+					
 					<div class="checkbox">
       					<label>
         					<input type="checkbox" id="speechinput" ></input>
 							<span class="locale" id="lang_stt"></span>
       					</label>
     				</div>
+	
+				<h2 class="title">Préférence d'affichage</h2>
+				
+					<div  class="position_cadre cadre_switch">
+				<div id="choix">
+				<h3 class="params2">Unifier la police</h3>
+					<label class="green gauche"><input type="radio" name="unif_police"  id="unif_police_load"><span>OUI</span></label>
+					<label class="red droite"><input type="radio" name="unif_police"  id="unif_police_unload" checked><span>NON</span></label>
 				</div>
+			</div>
+
+
+				
+					<div  class="position_cadre cadre_switch">
+				<div id="choix">
+				<h3 class="params2">Supprimer la police</h3>
+					<label class="supprpolice"><input type="radio" name="supp_img" id="supp_images_load"><span>OUI</span></label>
+					<label class="red droite"><input type="radio" name="supp_img" id="supp_images_unload" checked><span>NON</span></label>
+				</div>
+			</div>
+
+
+				
+					<div  class="position_cadre cadre_switch">
+				<div id="choix">
+				<h3 class="params2">Simplifier l'affichage</h3>
+					<label class="affic"><input type="radio" name="simp_affi" id="simp_affi_load"><span>OUI</span></label>
+					<label class="red droite"><input type="radio" name="simp_affi" id="simp_affi_unload"checked><span>NON</span></label>
+				</div>
+			</div>
+
+
+				<h2 id="title"></h2>
+
+<button id="toggle"></button>
+
+<div id="subcontrols">
+
+				<div class="contrast">
+
+							<fieldset>
+							<h3 class="params2">Activer le contraste</h3>
+							<div id="normal">
+							    <legend id="scheme_title"></legend>
+							    
+							      <input type="radio" name="scheme" value="0">
+							      <span i18n-content="highcontrast_mode_normal"></span>
+							    </label><br/>
+							    <label id="radio1"><br/>
+							      <input type="radio" name="scheme" value="1">
+							      <span i18n-content="highcontrast_increased_contrast"></span>
+							    </label><br/>
+							    <label id="radio2"><br/>
+							      <input type="radio" name="scheme" value="2">
+							      <span i18n-content="highcontrast_grayscale"></span>
+							    </label><br/>
+							    <label id="radio3"><br/>
+							      <input type="radio" name="scheme" value="3">
+							      <span i18n-content="highcontrast_inverted_color"></span>
+							    </label><br/>
+							    <label id="radio4"><br/>
+							      <input type="radio" name="scheme" value="4">
+							      <span i18n-content="highcontrast_inverted_grayscale"></span>
+							    </label>  <br/>
+							   <br/>
+							      <input type="radio" name="scheme" value="5">
+							      <span i18n-content="highcontrast_yellow_on_black"></span>
+							    </label>
+							    </div>
+				</fieldset>
+
+
+						</div>
 
 				
 			</div>
-				<div class="fieldset">
-					<div class="title" id="lang_paypal">Partager</div>
-					Tu aimes Don't Blink ?
-		
-					<a href="https://www.facebook.com/Dont-Blink-209454952732817/" target="_blank"><img src="images/facebook.png" /></a>
-				</div>
+			<button id="make_default"><span id="default" i18n-content="highcontrast_setdefault"></span></button>
 			</div>
+				<img id="logofooter" src="Marvellous.png" alt="Logo Marvellous">
+				<p id="footer">© Copyright 2016 Marvellous</p>
 	    </div>
-	  
+
+	  </div>
+
+
+
+
+
 	<script type="text/javascript" src="js/languages.js"></script>
 	<script type="text/javascript" src="js/options.js"></script>
-	<script type="text/javascript" src="js/common.js.js"></script>
+
+
+	<script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+    <script type="text/javascript" src="js/languages.js"></script>
+    <script type="text/javascript" src="js/options.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
