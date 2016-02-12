@@ -2,13 +2,13 @@ html {
   border-radius: 6px;
 }
 body {
-  width: 18em;
+  width: 800px;
   padding: 0.75em;
   border-radius: 6px;
 }
 * {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 10pt;
+  font-size: 15pt;
 }
 #title {
   outline: none;
@@ -19,24 +19,29 @@ body {
   font-size: 10pt;
 }
 button {
-  width: 100%;
+  width: 30%;
   margin: 0.75em 0 0.25em 0;
   padding: 0.5em 1.5em;
 }
 button#toggle {
   font-size: 12pt;
+      display: block;
+    margin: 0 auto;
 }
-body.disabled h3,
-body.disabled a,
-body.disabled label {
-  color: #aaa;
+
+button#toggle2 {
+  font-size: 12pt;
+      display: block;
+    margin: 5% auto;
 }
+
 h2 {
   font-size: 12pt;
   text-align: center;
 }
 label {
   display: block;
+      margin-left: 10%;
 }
 fieldset {
   border: none;
@@ -50,4 +55,134 @@ legend {
 }
 input[type="radio"] {
   margin-left: 1em;
+}
+
+img.logo {
+    width: 10%;
+    display: block;
+    margin: 0 auto;
+}
+#page-header{
+  background-color: #e4332a;
+ }
+
+ h2#options_title {
+    font-family: 'Nova Round', cursive;
+    text-align: center;
+    font-size: 45px;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+}
+
+#content {
+    display: block;
+    margin: 3% auto;
+    width: 90%;
+    border: solid 1px #E5E5E5;
+    border-radius: 7px;
+    height: 1900px;
+    background-color: #e5e5e5;
+    margin-bottom: 0px;
+}
+
+h2.title {
+  font-family: 'Nova Round', cursive;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 5%;
+}
+
+h3.params, h3.params2, div#lang_input {
+  font-family: 'Nova Round', cursive;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+select#voice{
+  margin-left: 3%;
+}
+
+img#play {
+    height: 17px;
+    -webkit-transform: rotate(180deg);
+}
+
+#test
+{
+  display:inline-block;
+  cursor:pointer;
+  width:25px;
+  height:20px;
+  margin:10px 0px -7px 0px;
+  -webkit-transform: rotate(180deg);
+  background:url('../images/play.png') no-repeat;
+}
+
+#testtext
+{
+  width: 450px;
+    margin-left: 4%;
+    margin-top: 3%;
+    font-family: 'Nova Round', cursive;
+}
+
+h2#options {
+    font-family: 'Nova Round', cursive;
+    text-align: center;
+    font-size: 45px;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+}
+
+input#hotkeys {
+    margin-left: 2%;
+}
+
+span#contx_info {
+    margin-left: 13%;
+}
+label.green.gauche {
+    display: inline-block;
+}
+
+label.red.droite {
+    display: inline-block;
+}
+
+label.supprpolice {
+    display: inline-block;
+        margin-left: 3%;
+}
+
+label.affic {
+    display: inline-block;
+    margin-left: 4%;
+}
+
+label#constr {
+    margin-left: 28%;
+}
+
+button#forget {
+    display: block;
+    margin: 7% auto;
+}
+legend#scheme_title {
+    margin: 0 auto;
+    margin-bottom: 2%;
+}
+img#logofooter {
+    width: 5%;
+    display: block;
+    margin: 1% auto;
+}
+
+p#footer {
+    text-align: center;
+    font-size: 13px;
+     font-family: 'Nova Round', cursive;
 }

@@ -249,7 +249,7 @@ img.logoAPP {
     margin: 1% Auto;
 }
 
-h3.params, h3.params2 {
+h3.params, h3.params2, div#lang_input {
 	font-family: 'Nova Round', cursive;
     display: inline-block;
     font-size: 20px;
@@ -277,7 +277,7 @@ h2#options {
     vertical-align: middle;
 }
  .options{
- 	background-color: red;
+ 	background-color: #e4332a;
  }
 
 
@@ -345,6 +345,16 @@ span#default {
     font-size: 18px;
 }
 
+button#toggle2 {
+    display: block;
+    margin: 5% auto;
+    height: 50px;
+    width: 550px;
+    margin-bottom: 0%;
+}
+
+
+
 button#toggle {
     display: block;
     margin: 5% auto;
@@ -371,4 +381,10 @@ img#play {
 }
 
 
-
+.fieldset {
+    width: inherit;
+    margin: 20px 0px 0px 0px;
+    padding: 0px 0px 0px 30px;
+    border-left: 2px solid transparent;
+    -webkit-transition: border 0.2s linear;
+}

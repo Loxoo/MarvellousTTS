@@ -1,7 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-		
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href='https://fonts.googleapis.com/css?family=Nova+Round' rel='stylesheet' type='text/css'>
+
+
 		<script>
 			var content = $( 'body' ).html().toString();
 			alert(content);
@@ -9,19 +13,23 @@
 		</script>
 </head>
 <body>
-	
+	<img src="icon.png" alt="logo Dont blink" class="logo">
 	<div id="content-holder" class="">
 			<div id="page-header">
-				<h1 id="options_title">Don't Blink</h1>
-				<div id="app_logo"> </div> 
+				<h2 id="options">Don't Blink</h1>
+				<div id="app_logo"></div> 
 			</div>
 			<div id="options">
 
+
+			<div id="content">
+
 				<div class="fieldset">
-					<div class="title locale" id="lang_playback"></div>
+					<h2 class="title">Préference d'écoute</h2>
 					<div class="select">
+					<div class="fieldset">
 						<label>
-			       			<span id="lang_engine" class="locale"></span>&nbsp;
+						<h3 class="params">Langue D'écoute</h3>
 							<select id="voice" selected name="voice"></select> 
 							
 						</label>
@@ -29,7 +37,7 @@
 
 					<div class="range">
 						<label>
-							<span id="lang_volume" class="locale"></span>
+							<h3 class="params">Volume par défault</h3>
 							<input id="volume" type="range" min="0" max="100" value="0"></input>
 							<span id="percents"></span>
 						</label>
@@ -38,7 +46,7 @@
 					<div id="moreoptions" style="display:none">
 						<div class="range">
 							<label>
-								<span id="lang_rate" class="locale"></span>
+								<h3 class="params">Vitesse d'élocution</h3>
 								<input id="rate" type="range" min="0.5" max="4.0" value="1.0" step="0.1"></input>
 								<span id="rateps"></span> 
 								<span id="words">200</span> <span id="lang_wpm" class="locale"></span>
@@ -47,7 +55,7 @@
 
 						<div class="range">
 							<label>
-								<span id="lang_pitch" class="locale"></span>
+								<h3 class="params">Timbre de voix</h3>
 								<input id="pitch" type="range" min="0.0" max="2.0" value="1.0" step="0.2" ></input>
 								<span id="percents"></span>
 							</label>
@@ -55,12 +63,13 @@
 
 						<div class="checkbox">
       						<label>
+      						<h3 class="params"></h3>
        	 						<input type="checkbox" disabled="disabled" id="enqueue"  /></input>
 								<span id="lang_enqueue" class="locale"></span>
       						</label>
     					</div>	
 					</div>
-
+</div>
 					<div id="ispeech" style="display:none">
 						<div class="range">
 							<label>
@@ -79,18 +88,17 @@
 					</div>
 				</div>
 
-				<div class="fieldset">
-					<div class="title locale" id="lang_testing"></div>
-					<input type="text" id="testtext" value="Ceci est un texte généré pour tester la traduction"></input>
-					<div id="test"></div>
-				</div>
+				<h2 class="title">Test</h2>
+					<input type="text" id="testtext" value="Ceci est un texte généré pour tester la voix"></input>
+					<div id="test"><img id="play" src="images/play.png" alt="">
+					</div>
 
-				<div class="fieldset">
-					<div class="title locale" id="lang_shortcuts"></div>
+				<h2 class="title">Préférence de raccourcis</h2>
 					<div class="input">
-						<label>
-							<span class="locale" id="lang_keyboard"></span> 
+							<h3 class="params2">Raccourci clavier</h3>
+
 							<input type="text" id="hotkeys"></input>
+							<label>
 						</label>
 					</div>
 					<div class="checkbox">
@@ -100,105 +108,120 @@
       					</label>
     				</div>					
 					<span class="locale" id="contx_info"></span>
-				</div>
 
 				<div class="fieldset">
-					<div class="title locale" id="lang_input"></div>
+					<h2 class="title">Préférence d'entrée vocale</h2>
 					<div class="checkbox">
       					<label>
         					<input type="checkbox" id="speechinput" ></input>
 							<span class="locale" id="lang_stt"></span>
       					</label>
     				</div>
-				</div>
 
-				
+
+
+
+
+	
 			</div>
-				<div class="fieldset">
+				<!-- <div class="fieldset">
 					<div class="title" id="lang_paypal">Partager</div>
 					Tu aimes Don't Blink ?
 		
 					<a href="https://www.facebook.com/Don't Blink/" target="_blank"><img src="images/facebook.png" /></a>
-				</div>
+				</div> -->
 				
-		</div>
-		
+				
     <div>
-        <a href="#" onclick="setActiveStyleSheet('Normalize'); return false;">Activer la skin "classique"</a>
+
+<button id="toggle2"><b><a href="#" onclick="setActiveStyleSheet('Normalize'); return false;">Activer le skin "classique"</a></b></button>
     </div>
 	
-	<div class="position_cadre titre">
-				Unifier la police: 
-			</div>
-			<div  class="position_cadre cadre_switch">
+
+
+
+
+<h2 class="title">Préférence d'affichage</h2>
+				
+					<div  class="position_cadre cadre_switch">
 				<div id="choix">
+				<h3 class="params2">Unifier la police</h3>
 					<label class="green gauche"><input type="radio" name="unif_police"  id="unif_police_load"><span>OUI</span></label>
 					<label class="red droite"><input type="radio" name="unif_police"  id="unif_police_unload" checked><span>NON</span></label>
 				</div>
 			</div>
-			<div class="clear"></div>
-			
-			
-			<div class="position_cadre titre">
-				Supprimer les images: 
-			</div>
-			<div  class="position_cadre cadre_switch">
+
+
+				
+					<div  class="position_cadre cadre_switch">
 				<div id="choix">
-					<label class="green gauche"><input type="radio" name="supp_img" id="supp_images_load"><span>OUI</span></label>
+				<h3 class="params2">Supprimer les images</h3>
+					<label class="supprpolice"><input type="radio" name="supp_img" id="supp_images_load"><span>OUI</span></label>
 					<label class="red droite"><input type="radio" name="supp_img" id="supp_images_unload" checked><span>NON</span></label>
 				</div>
 			</div>
-			<div class="clear"></div>
-			
 
-			<div class="position_cadre titre">
-				Simplifier l'affichage: 
-			</div>
-			<div  class="position_cadre cadre_switch">
+								<div  class="position_cadre cadre_switch">
 				<div id="choix">
-					<label class="green gauche"><input type="radio" name="simp_affi" id="simp_affi_load"><span>OUI</span></label>
+				<h3 class="params2">Simplifier l'affichage</h3>
+					<label class="affic"><input type="radio" name="simp_affi" id="simp_affi_load"><span>OUI</span></label>
 					<label class="red droite"><input type="radio" name="simp_affi" id="simp_affi_unload"checked><span>NON</span></label>
 				</div>
 			</div>
 
-<h2 id="title"></h2>
+
+				<h2 id="title"></h2>
 
 <button id="toggle"></button>
 
 <div id="subcontrols">
 
-  <fieldset>
-    <legend id="scheme_title"></legend>
-    <label>
+				<div class="contrast">
+
+							<fieldset>
+							<h3 class="params2">Activer le contraste</h3>
+							<div id="normal">
+							    <legend id="scheme_title"></legend>
+							    
+							      <label id="constr">
       <input type="radio" name="scheme" value="0">
       <span i18n-content="highcontrast_mode_normal"></span>
     </label>
-    <label>
+    <label id="constr">
       <input type="radio" name="scheme" value="1">
       <span i18n-content="highcontrast_increased_contrast"></span>
     </label>
-    <label>
+    <label id="constr">
       <input type="radio" name="scheme" value="2">
       <span i18n-content="highcontrast_grayscale"></span>
     </label>
-    <label>
+    <label id="constr">
       <input type="radio" name="scheme" value="3">
       <span i18n-content="highcontrast_inverted_color"></span>
     </label>
-    <label>
+    <label id="constr">
       <input type="radio" name="scheme" value="4">
       <span i18n-content="highcontrast_inverted_grayscale"></span>
     </label>
-    <label>
+    <label id="constr">
       <input type="radio" name="scheme" value="5">
       <span i18n-content="highcontrast_yellow_on_black"></span>
     </label>
-  </fieldset>
+							    </div>
+				</fieldset>
+
+
+						</div>
+
 
   <button id="make_default"><span i18n-content="highcontrast_setdefault"></span></button>
 
   <button id="forget"><span i18n-content="highcontrast_forget"></span></button>
 
+</div>
+
+<img id="logofooter" src="Marvellous.png" alt="Logo Marvellous">
+				<p id="footer">© Copyright 2016 Marvellous</p>
 </div>
   <link rel="stylesheet" type="text/css" href="css/popup.css">
 
